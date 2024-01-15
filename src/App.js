@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./components/navbar";
 
-
 //bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
 

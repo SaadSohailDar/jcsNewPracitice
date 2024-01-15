@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import React from "react";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.png';
 
 import './navbar.scss';
 
@@ -14,9 +14,12 @@ export default function NavigationBar()
 {
   return(
  
-    <Navbar  className="bg-body-tertiary" expand="lg" bg="light" data-bs-theme="light">
+    <Navbar  expand="lg" bg="light" data-bs-theme="light">
+    
         <Container>
-          <Navbar.Brand href="#home"><img  src={Logo} /></Navbar.Brand>
+        <Navbar.Brand href="/">
+                        <img src={Logo} className="navbar-brand " alt="Just Care Services"/>
+         </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto justify-content-end">
