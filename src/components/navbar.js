@@ -4,6 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import React from "react";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import Logo from '../assets/logo.png'
+
+import './navbar.scss';
+
+import {Row,Col} from 'react-bootstrap';
 
 export default function NavigationBar()
 {
@@ -11,9 +16,8 @@ export default function NavigationBar()
  
     <Navbar  className="bg-body-tertiary" expand="lg" bg="light" data-bs-theme="light">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home"><img  src={Logo} /></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto justify-content-end">
               <Nav.Link href="#home">Home</Nav.Link>
