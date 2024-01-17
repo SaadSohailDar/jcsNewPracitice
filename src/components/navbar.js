@@ -17,7 +17,7 @@ export default function NavigationBar()
 {
   return(
  
-    <Navbar fixed='top'  expand="lg" bg="light" data-bs-theme="light">
+    <Navbar expand="lg" bg="light" data-bs-theme="light">
     
         <Container>
         
