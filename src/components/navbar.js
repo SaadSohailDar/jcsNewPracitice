@@ -9,23 +9,31 @@ import Logo from '../assets/logo.png';
 import './navbar.scss';
 
 import {Row,Col} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
+
 
 export default function NavigationBar()
 {
   return(
  
-    <Navbar  expand="lg" bg="light" data-bs-theme="light">
+    <Navbar fixed='top'  expand="lg" bg="light" data-bs-theme="light">
     
         <Container>
-        <Navbar.Brand href="/">
+        
+        <LinkContainer to="/">
+        <Navbar.Brand to="/">
                         <img src={Logo} className="navbar-brand " alt="Just Care Services"/>
          </Navbar.Brand>
+         </LinkContainer>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto justify-content-end">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <LinkContainer to="/"><Nav.Link>Home</Nav.Link></LinkContainer>
+              <LinkContainer to="/features"><Nav.Link>Features</Nav.Link></LinkContainer>
+              <LinkContainer to="/pricing"><Nav.Link>Pricing</Nav.Link></LinkContainer>
+              
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -39,8 +47,7 @@ export default function NavigationBar()
             </NavDropdown>
             </Nav>
           </Navbar.Collapse>
-
-
+          
         </Container>
     </Navbar>
     );

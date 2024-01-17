@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/navbar";
-import ExampleCarouselImage from './assets/stock1.png';
-import Carousel from 'react-bootstrap/Carousel';
+import Home from "./routes/home";
+
 //bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,39 +9,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter } from "react-router-dom";
 import { Routes,Route } from "react-router-dom";
-
+import Features from "./routes/Features";
+import Pricing from "./routes/Pricing";
 
 const App = () => 
 {
   return (
   <>
   <BrowserRouter>
-  <Carousel>
-      <Carousel.Item>
-        <ExampleCarouselImage text="First slide" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage text="Second slide" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
   <Navbar />
+  
+  <div className='Spacing'></div>
+  <Routes>
+    <Route path='/' element={<Home />} />
+    <Route path='/features' element={<Features />} />
+    <Route path='/pricing' element={<Pricing />} />
+  </Routes>
   </BrowserRouter>
   </>
   );
