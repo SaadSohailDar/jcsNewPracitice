@@ -5,6 +5,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import {footerLinks} from './footerLinks.js';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -24,12 +25,13 @@ export default function Footer()
                 </Col>
                 <Col lg={4}>
                     <h2>USEFUL LINKS</h2>
-                    <LinkContainer to="/values" className="footer-links"><Link>Our Values</Link></LinkContainer>
-                    <LinkContainer to="/privacy" className="footer-links"><Link>Privacy Policy</Link></LinkContainer>
-                    <LinkContainer to="/careers" className="footer-links"><Link>Careers</Link></LinkContainer>
-                    <LinkContainer to="/diversity" className="footer-links"><Link>Diversity</Link></LinkContainer>
-                    <a href="https://www.google.com/" className="footer-links">Google</a>
-                    <a href="https://www.youtube.com/" className="footer-links">Youtube</a>
+
+                    
+                    {footerLinks.map((link, index) => (
+                        <LinkContainer key={index} to={link.url} className="footer-links">
+                            <Link>{link.title}</Link>
+                        </LinkContainer>
+                    ))}
                 </Col>
                 <Col lg={4}>
                 <h2>RECONCILIATION STATEMENT</h2>
