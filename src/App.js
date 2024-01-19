@@ -36,7 +36,6 @@ const App = () =>
     <Route path='/diversity' element={<Diversity />} />
   </Routes>
 
-  <Footer />
   </BrowserRouter>
   </>
   );

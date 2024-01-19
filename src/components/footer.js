@@ -32,6 +32,8 @@ export default function Footer()
                             <Link>{link.title}</Link>
                         </LinkContainer>
                     ))}
+
+                    
                 </Col>
                 <Col lg={4}>
                 <h2>RECONCILIATION STATEMENT</h2>
